@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="song-view">
+    <a href="{{ url_for('index') }}" class="back-button">&larr; Back to List</a>
+    <h2>{{ song.title }}</h2>
+    <pre class="lyrics">{{ song.lyrics }}</pre>
+</div>
+{% endblock %}

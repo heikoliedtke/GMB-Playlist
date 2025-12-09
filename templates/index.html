@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="song-list">
+    <h2>Select a Song</h2>
+    <ul>
+        {% for song in songs %}
+        <li>
+            <a href="{{ url_for('song', song_id=song.id) }}">
+                <span class="song-number">{{ loop.index }}</span>
+                <span class="song-title">{{ song.title }}</span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
